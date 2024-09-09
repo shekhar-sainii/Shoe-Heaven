@@ -27,7 +27,7 @@ const getAllOrdersOfAllUsers = async (req, res) => {
 const getOrderDetailsForAdmin = async (req, res) => {
   try {
     const { id } = req.params;
-
+    
     const order = await Order.findById(id);
 
     if (!order) {

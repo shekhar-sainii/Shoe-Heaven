@@ -20,8 +20,10 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 //create a database connection -> u can also
 //create a separate file for this and then import/use that file here
 
+const url = "mongodb://127.0.0.1:27017/devyanshi"
+
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(url)
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
